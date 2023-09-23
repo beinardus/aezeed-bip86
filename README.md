@@ -2,7 +2,7 @@
 
 Generate Taproot (BIP86) HD addresses using a BIP32 root key.
 
-# introduction
+## introduction
 
 There was a well known procedure to recover onchain funds of a LND wallet. Because LND uses aezeed mnemonics, this was not straight forward and required two tools:
 
@@ -12,7 +12,7 @@ There was a well known procedure to recover onchain funds of a LND wallet. Becau
 The method is described here:
 [Restore LND onchain funds in Electrum](https://www.lightningnode.info/technicals/restorelndonchainfundsinelectrum)
 
-In short, the toolkit is used to translate the aezeed mnemonics to a `HD node root key base58` for `BTC (Bitcoin legacy, BIP32/44)`. Then, in the `bip39` tool, paste this into the `BIP32 Root Key` field, open the tab BIP44 and copy the generated `Account Extended Private Key` which can be used to open the wallet in Electrum.
+In short, the toolkit is used to translate the aezeed mnemonics to a `HD node root key base58` for `BTC (Bitcoin legacy, BIP32/44)`. Then, in the `bip39` tool, paste this into the `BIP32 Root Key` field, open the tab `BIP84` and copy the generated `Account Extended Private Key` which can be used to open the wallet in Electrum.
 In the meantime LND went from Nested SegWit, to Native SegWit, to Taproot and at this moment in time, the BIP39 tool and Electrum are lagging behind. I wrote this fiddle to get grip on my current onchain balance in LND.
 The previous method is not abandoned and maybe the developers of the BIP39 tool and Electrum find time to get Taproot implemented and making this fiddle obsolete:
 
@@ -24,13 +24,13 @@ The previous method is not abandoned and maybe the developers of the BIP39 tool 
 > [!WARNING]
 > Don't use these tools online but copy them to your local drive. If you care about your security, disconnect the internet, or even use an air-gapped computer.
 
-# requirements
+## requirements
 
 - git
 - nodejs
 - faith and a good mood
 
-# installation
+## installation
 
 ```bash
 git clone https://github.com/beinardus/aezeed-bip86.git
@@ -39,7 +39,7 @@ npm i
 node src/index.js
 ```
 
-# output
+## output
 
 The account keys, the first 5 primary addresses, the first 5 change addresses. All acompanied with their private keys.
 
@@ -65,9 +65,13 @@ bc1pmfz8mvmmqhlw58hmfa6h6au0ulglhjhzzj2628kn95eqtc20rp6s28077a | KxMq6nJtG372rsL
 bc1p7j0q2qrex3pm4hat5lwyjez8tf3jwq0rxdexxted37ddzhck492qas3wav | KxB2tZ5fF9LfPaTE61QHmsBwbUguEdht1bbbHBh9ULc3pU2iLkqN
 ```
 
-# use in Sparrow
+## use in Sparrow
 
 - In `settings` choose `Script type`:`Taproot (P2TR)`
 - Click `xPub / Watch only wallet`
 - Change `Derivation` to `m/86'/0'/0'/0`
 - Paste the account key into `xpub`
+
+## todo
+
+Find a way to manage the funds using `xprv`
