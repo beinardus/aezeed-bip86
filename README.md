@@ -72,9 +72,15 @@ bc1p7j0q2qrex3pm4hat5lwyjez8tf3jwq0rxdexxted37ddzhck492qas3wav | KxB2tZ5fF9LfPaT
 - Change `Derivation` to `m/86'/0'/0'/0`
 - Paste the account key into `xpub`
 
-## todo
+## use in Sparrow (full wallet import)
 
-Find a way to manage the funds using `xprv`
+This fiddle is already obsolete if you want to use the full wallet functionality.
+
+- Create a new Taproot wallet by selecting `Script Type` `Taproot (P2TR)`
+- Use the option `New or Imported Software Wallet`.
+- Choose the option `Master Private Key (BIP32)`
+- Paste the `HD node root key base58` obtained with the Cryptography Toolkit
+- Select derivation path `m/86'/0'/0'`
 
 ## credits
 
