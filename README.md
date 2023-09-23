@@ -82,6 +82,14 @@ This fiddle is already obsolete if you want to use the full wallet functionality
 - Paste the `HD node root key base58` obtained with the Cryptography Toolkit
 - Select derivation path `m/86'/0'/0'`
 
+## checking addresses in LND
+
+Show all the onchain addresses used in LND grouped by address type.
+
+```
+lncli wallet addresses list
+```
+
 ## credits
 
 - Oliver Gugger (Cryptography Toolkit)
