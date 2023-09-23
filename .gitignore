@@ -1,0 +1,11 @@
+# NodeJS specific #
+node_modules/
+package-lock.json
+
+lnd/*
+!lnd/*.proto
+
+*.db
+
+config/*
+!config/default.json

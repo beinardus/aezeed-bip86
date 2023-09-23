@@ -1,0 +1,16 @@
+{
+  "name": "aezeed-bip86",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bip32": "^4.0.0",
+    "bip86": "^0.0.3",
+    "tiny-secp256k1": "^2.2.3"
+  }
+}
