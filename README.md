@@ -19,7 +19,7 @@ The previous method is not abandoned and maybe the developers of the BIP39 tool 
 - Convert the aezeed mnemonic to a HD node root key following the previous instructions.
 - Edit the script `index.js` or use an environment variable `BIP32ROOTKEY` to set `bip32RootKey`
 - Run the script (see below)
-- Use the `account private key` or `account public` key in a wallet with Taproot import capabilities i.e. Sparrow
+- Use the `account private key` or `account public key` in a wallet with Taproot import capabilities i.e. Sparrow
 
 > [!WARNING]
 > Don't use these tools online but copy them to your local drive. If you care about your security, disconnect the internet, or even use an air-gapped computer.
