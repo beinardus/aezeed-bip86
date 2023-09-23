@@ -10,9 +10,9 @@ There was a well known procedure to recover onchain funds of a LND wallet. Becau
 - [github.com/iancoleman/bip39](https://github.com/iancoleman/bip39)
 
 The method is described here:
-[Restore Lnd onchain funds in Electrum](https://www.lightningnode.info/technicals/restorelndonchainfundsinelectrum)
+[Restore LND onchain funds in Electrum](https://www.lightningnode.info/technicals/restorelndonchainfundsinelectrum)
 
-In short, the toolkit is used to translate the aezeed mnemonics to a `HD node root key base58` for `BTC (Bitcoin legacy, BIP32/44)`. Then in the `bip39` tool, paste this into the `BIP32 Root Key` field, open the tab BIP44 and copy the generated 'Account Extended Private Key' which can be used to open the wallet in Electrum.
+In short, the toolkit is used to translate the aezeed mnemonics to a `HD node root key base58` for `BTC (Bitcoin legacy, BIP32/44)`. Then, in the `bip39` tool, paste this into the `BIP32 Root Key` field, open the tab BIP44 and copy the generated 'Account Extended Private Key' which can be used to open the wallet in Electrum.
 In the meantime LND went from Nested SegWit, to Native SegWit, to Taproot and at this moment in time, the BIP39 tool and Electrum are lagging behind. I wrote this fiddle to get grip on my current onchain balance in LND.
 The previous method is not abandoned and maybe the developers of the BIP39 tool and Electrum find time to get Taproot implemented and making this tool obsolete:
 
@@ -20,6 +20,12 @@ The previous method is not abandoned and maybe the developers of the BIP39 tool 
 - Edit the script `index.js` or use an environment variable `BIP32ROOTKEY` to set `bip32RootKey`
 - Run the script (see below)
 - Use the `account private key` or `account public` key in a wallet with Taproot import capabilities i.e. Sparrow
+
+# requirements
+
+- git
+- nodejs
+- faith and a good mood
 
 # installation
 
