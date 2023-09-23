@@ -75,3 +75,9 @@ bc1p7j0q2qrex3pm4hat5lwyjez8tf3jwq0rxdexxted37ddzhck492qas3wav | KxB2tZ5fF9LfPaT
 ## todo
 
 Find a way to manage the funds using `xprv`
+
+## credits
+
+- Oliver Gugger (Cryptography Toolkit)
+- Ian Coleman (BIP39 toolkit)
+- Anderson-Juhasc (unit tests for BIP86)
