@@ -76,11 +76,15 @@ bc1p7j0q2qrex3pm4hat5lwyjez8tf3jwq0rxdexxted37ddzhck492qas3wav | KxB2tZ5fF9LfPaT
 
 This fiddle is already obsolete if you want to use the full wallet functionality.
 
-- Create a new Taproot wallet by selecting `Script Type` `Taproot (P2TR)`
+- Create a new Taproot wallet by selecting `Script Type` = `Taproot (P2TR)`
 - Use the option `New or Imported Software Wallet`.
 - Choose the option `Master Private Key (BIP32)`
 - Paste the `HD node root key base58` obtained with the Cryptography Toolkit
 - Select derivation path `m/86'/0'/0'`
+- Click `Import Keystore`
+
+> [!NOTE]
+> LND uses multiple types of wallets. It is common that funds are in both Taproot (BIP86) and Embedded Segwit (BIP84). For BIP84 Repeat the above instructions but use: `Script Type` = `Native Segwit (P2WPKH)` and `Derivation Path` = `m84'/0'/0'`
 
 ## checking addresses in LND
 
